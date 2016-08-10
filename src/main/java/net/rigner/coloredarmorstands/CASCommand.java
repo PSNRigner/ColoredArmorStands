@@ -20,7 +20,7 @@ class CASCommand implements CommandExecutor
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings)
     {
-        if (commandSender.hasPermission("cas.change") || !(commandSender instanceof Player))
+        if (!commandSender.hasPermission("cas.change") || !(commandSender instanceof Player))
             return true;
         if (strings.length == 0)
         {

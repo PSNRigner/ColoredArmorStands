@@ -27,7 +27,7 @@ class CASListener implements Listener
         if (event.getRightClicked().getType() != EntityType.ARMOR_STAND
                 || itemStack == null
                 || itemStack.getType() != Material.BLAZE_POWDER
-                || event.getPlayer().hasPermission("cas.change"))
+                || !event.getPlayer().hasPermission("cas.change"))
             return ;
         event.setCancelled(true);
         String name = this.plugin.getNameForPlayer(event.getPlayer().getUniqueId());
