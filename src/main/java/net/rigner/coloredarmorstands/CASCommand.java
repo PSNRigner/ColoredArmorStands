@@ -30,7 +30,7 @@ class CASCommand implements CommandExecutor
         String name = String.join(" ", Arrays.asList(strings));
         name = ChatColor.translateAlternateColorCodes('&', name);
         this.plugin.setStringForPlayer(((Player)commandSender).getUniqueId(), name);
-        commandSender.sendMessage(ChatColor.GREEN + "Name defined, right click on armorstand with blaze power to paste it !");
+        commandSender.sendMessage(ChatColor.GREEN + "Name defined, right click on armorstand with blaze powder to paste it !");
         return true;
     }
 }
